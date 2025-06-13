@@ -65,6 +65,31 @@ Your mobile-first döner ordering website is **fully complete** and ready for Az
 12. [`plan.md`](donerbestellijst/plan.md) - Original design specifications
 13. [`prijslijst.txt`](donerbestellijst/prijslijst.txt) - Original price list (reference)
 
+## 🔒 **Security & Configuration**
+
+### ⚠️ **Important: Environment Configuration**
+
+This repository contains **template files only** - no sensitive information is stored in the code:
+
+- `app-settings-reference.json` - Contains placeholder values for Azure configuration
+- `.env.example` - Template for local environment variables
+- `DEPLOYMENT_GUIDE.md` - Step-by-step setup with placeholder credentials
+
+### 🔐 **Before Deployment:**
+
+1. **Never commit real credentials** to version control
+2. **Use Azure App Service Application Settings** for production environment variables
+3. **Replace all placeholder values** with your actual Azure credentials:
+   - `YOUR-ACS-RESOURCE` → Your Azure Communication Services resource name
+   - `YOUR_ACCESS_KEY_HERE` → Your actual ACS access key
+   - `+31612345678` → Your restaurant's phone number
+
+### 📁 **Protected Files (via .gitignore):**
+- `.env` files with real credentials
+- `app-settings.json` with actual values
+- `local.settings.json`
+- Any files containing production secrets
+
 ## 🚀 **Ready for Azure Deployment**
 
 ### **What You Need to Create in Azure:**
